@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 700px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.results_Table {
+    padding: 50px;
+    background-color: rgb(90, 90, 90);
+    height: 300px;
+    width: 600px;
+    color: white;
+    font-size: 2em;
+}
+
+.results_Table > h1 {
+    color: lightblue;
+}
+
+.results_Table > a {
+    text-decoration: none;
+    color: blue;
+}
+
+.results_Table > a:hover {
+    color: yellow;
+}
