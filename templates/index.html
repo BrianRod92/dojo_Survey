@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap css (Jinja sintax) static render link below -->
     <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
     <title>Dojo Survey</title>
 </head>
@@ -13,15 +14,19 @@
     <div class="container">
         <form action="/processing" method="POST" class="form">
             <h3>Dojo Survey</h3>
+            <!-- Name label/ input code below -->
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Name:</label>
                 <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="">
             </div>
+            <!-- Location label/ select code below -->
             <div>
                 <label for="location_Select" class="select-label">Dojo Location:</label>
+                <!-- name is used as the key for request.form -->
                 <select id="location_Select" name="location" class="form-select form-select-lg mb-3"
                     aria-label=".form-select-lg example">
                     <option selected>--Select A Location--</option>
+                    <!-- Value is used as the output value for the key in name -->
                     <option value="Chicago">Chicago</option>
                     <option value="Seattle">Seattle</option>
                     <option value="Online">Online</option>
@@ -29,21 +34,26 @@
                     <option value="Bellevue">Bellevue</option>
                 </select>
             </div>
+            <!-- Language label/ select code below -->
             <div>
                 <label for="language_Select" class="language-label">Favorite Language:</label>
+                <!-- name is used as the key for request.form -->
                 <select id="language_Select" name="language" class="form-select form-select-lg mb-3"
                     aria-label=".form-select-lg example">
                     <option selected>--Select A Language--</option>
+                    <!-- Value is used as the output value for the key in name -->
                     <option value="Python">Python</option>
                     <option value="JavaScript">JavaScript</option>
                     <option value="CSS">CSS</option>
                     <option value="C#">C#</option>
                 </select>
             </div>
+            <!-- Text area "comment" code below -->
             <div class="mb-3">
                 <label for="commentsTextarea" class="form-label">Comments:</label>
                 <textarea class="form-control" name="comment" id="commentsTextarea" rows="8"></textarea>
             </div>
+            <!-- Form submit button code below -->
             <button class="submit" type="submit">Submit</button>
         </form>
     </div>
